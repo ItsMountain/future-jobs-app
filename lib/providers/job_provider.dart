@@ -10,8 +10,8 @@ class JobProvider with ChangeNotifier {
       var response =
           await http.get(Uri.parse('https://future-jobs-api.vercel.app/jobs'));
 
-      print('Job Status Code: ${response.statusCode}');
-      print('Job Response: ${response.body}');
+      // print('Job Status Code: ${response.statusCode}');
+      // print('Job Response: ${response.body}');
 
       if (response.statusCode == 200) {
         List<JobModel> jobs = [];
@@ -37,8 +37,8 @@ class JobProvider with ChangeNotifier {
       var response = await http.get(Uri.parse(
           'https://future-jobs-api.vercel.app/jobs?category=$category'));
 
-      print('Job By Category Status Code: ${response.statusCode}');
-      print('Job By Category Response: ${response.body}');
+      // print('Job By Category Status Code: ${response.statusCode}');
+      // print('Job By Category Response: ${response.body}');
 
       if (response.statusCode == 200) {
         List<JobModel> jobs = [];
